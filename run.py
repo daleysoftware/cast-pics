@@ -20,15 +20,7 @@ class Scheduler(object):
         threading.Thread(target=self._func_to_be_threaded).start()
 
 
-class ChromecastBroadcaster(object):
-    def __init__(self):
-        pass
-    def _func_to_be_threaded(self):
-        self.s.run()
-    def start(self):
-        threading.Thread(target=self._func_to_be_threaded).start()
-
-
 if __name__ == '__main__':
+    # TODO will need multiple flask apps running on random ports.
     Flask(app).start()
     Scheduler(s).start()
